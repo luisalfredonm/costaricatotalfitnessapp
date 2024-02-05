@@ -32,7 +32,7 @@ const menu = [
     icon: <FaRegChartBar />,
     childrens: [
       {
-        title: "All Members",
+        title: "All",
         path: "/dashboard",
       },
       {
