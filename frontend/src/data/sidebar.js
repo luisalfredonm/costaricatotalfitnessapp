@@ -2,26 +2,12 @@ import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import { BiImageAdd } from "react-icons/bi";
 
 const menu = [
-
   {
     title: "Dashboard",
     icon: <FaTh />,
     path: "/dashboard",
   },
-  {
-    title: "Account",
-    icon: <FaRegChartBar />,
-    childrens: [
-      {
-        title: "Profile",
-        path: "/profile",
-      },
-      {
-        title: "Edit Profile",
-        path: "/edit-profile",
-      },
-    ],
-  },
+
   // {
   //   title: "Add Member",
   //   icon: <BiImageAdd />,
@@ -42,7 +28,34 @@ const menu = [
       },
     ],
   },
-
+  {
+    title: "Reports",
+    icon: <FaRegChartBar />,
+    childrens: [
+      {
+        title: "Sales History",
+        path: "/profile",
+      },
+      {
+        title: "Membership History",
+        path: "/edit-profile",
+      },
+    ],
+  },
+  {
+    title: "Account",
+    icon: <FaRegChartBar />,
+    childrens: [
+      {
+        title: "Profile",
+        path: "/profile",
+      },
+      {
+        title: "Edit Profile",
+        path: "/edit-profile",
+      },
+    ],
+  },
   {
     title: "Admin",
     icon: <BiImageAdd />,
@@ -62,7 +75,6 @@ const menu = [
         path: "/add-client",
       },
     ],
-
   },
   {
     title: "Report Bug",
