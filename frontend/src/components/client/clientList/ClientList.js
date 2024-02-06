@@ -105,7 +105,7 @@ const ClientList = ({ products, isLoading }) => {
                 <tr>
                   <th>s/n</th>
                   <th>Name</th>
-                  <th>Category</th>
+                  <th>Email</th>
                   <th>Price</th>
                   <th>Quantity</th>
                   <th>Value</th>
