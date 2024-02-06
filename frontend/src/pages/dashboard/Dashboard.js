@@ -29,6 +29,7 @@ const Dashboard = () => {
     <div>
       <ClientSummary products={products} />
       <ClientList products={products} isLoading={isLoading} />
+      {/* <ClientList products={products} isLoading={isLoading} /> */}
     </div>
   );
 };
