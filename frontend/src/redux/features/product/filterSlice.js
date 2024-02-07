@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  filteredProducts: [],
+  filteredClients: [],
 };
 
 const filterSlice = createSlice({
@@ -16,13 +16,13 @@ const filterSlice = createSlice({
           product.category.toLowerCase().includes(search.toLowerCase())
       );
 
-      state.filteredProducts = tempProducts;
+      state.filteredClients = tempProducts;
     },
   },
 });
 
 export const { FILTER_PRODUCTS } = filterSlice.actions;
 
-export const selectFilteredPoducts = (state) => state.filter.filteredProducts;
+export const selectFilteredPoducts = (state) => state.filter.filteredClients;
 
 export default filterSlice.reducer;

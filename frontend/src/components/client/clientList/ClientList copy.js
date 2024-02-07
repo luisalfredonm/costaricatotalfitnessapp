@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 
 const ClientList = ({ products, isLoading }) => {
   const [search, setSearch] = useState("");
-  const filteredProducts = useSelector(selectFilteredPoducts);
+  const filteredClients = useSelector(selectFilteredPoducts);
 
   const dispatch = useDispatch();
 
@@ -64,12 +64,12 @@ const ClientList = ({ products, isLoading }) => {
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
 
-    setCurrentItems(filteredProducts.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(filteredProducts.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, filteredProducts]);
+    setCurrentItems(filteredClients.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(filteredClients.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, filteredClients]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % filteredProducts.length;
+    const newOffset = (event.selected * itemsPerPage) % filteredClients.length;
     setItemOffset(newOffset);
   };
   //   End Pagination
