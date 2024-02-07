@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      {/* <ClientSummary products={products} /> */}
+      <ClientSummary products={products} />
       <ClientList products={products} isLoading={isLoading} />
       {/* <ClientList products={products} isLoading={isLoading} /> */}
     </div>

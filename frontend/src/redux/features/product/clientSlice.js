@@ -3,7 +3,7 @@ import clientService from "./clientService";
  import { toast } from "react-toastify";
 
 const initialState = {
-  client: null,
+  product: null,
   products: [],
   isError: false,
   isSuccess: false,
@@ -110,7 +110,7 @@ export const updateClient = createAsyncThunk(
 );
 
 const clientSlice = createSlice({
-  name: "client",
+  name: "product",
   initialState,
   reducers: {
     CALC_STORE_VALUE(state, action) {
@@ -211,7 +211,7 @@ const clientSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        state.client = action.payload;
+        state.product = action.payload;
       })
       .addCase(getClient.rejected, (state, action) => {
         state.isLoading = false;
@@ -241,10 +241,10 @@ const clientSlice = createSlice({
 export const { CALC_STORE_VALUE, CALC_OUTOFSTOCK, CALC_CATEGORY } =
   clientSlice.actions;
 
-export const selectIsLoading = (state) => state.client.isLoading;
- export const selectProduct = (state) => state.client.client;
-export const selectTotalStoreValue = (state) => state.client.totalStoreValue;
- export const selectOutOfStock = (state) => state.client.outOfStock;
- export const selectCategory = (state) => state.client.category;
+export const selectIsLoading = (state) => state.product.isLoading;
+ export const selectProduct = (state) => state.product.product;
+export const selectTotalStoreValue = (state) => state.product.totalStoreValue;
+ export const selectOutOfStock = (state) => state.product.outOfStock;
+ export const selectCategory = (state) => state.product.category;
 
 export default clientSlice.reducer;
