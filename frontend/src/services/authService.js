@@ -123,6 +123,19 @@ export const getUser = async () => {
     toast.error(message);
   }
 };
+// Get User Profile
+export const getUsers = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_URL}/api/user/getusers`);
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
 // Update Profile
 export const updateUser = async (formData) => {
   try {
