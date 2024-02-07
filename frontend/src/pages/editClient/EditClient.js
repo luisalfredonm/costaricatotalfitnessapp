@@ -9,7 +9,7 @@ import {
   selectIsLoading,
   selectProduct,
   updateClient,
-} from "../../redux/features/product/clientSlice";
+} from "../../redux/features/client/clientSlice";
 
 const EditClient = () => {
   const { id } = useParams();

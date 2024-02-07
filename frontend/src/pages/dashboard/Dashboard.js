@@ -4,7 +4,7 @@ import ClientList from "../../components/client/clientList/ClientList"
 import ClientSummary from "../../components/client/clientSummary/ClientSummary";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
-import { getClients } from "../../redux/features/product/clientSlice";
+import { getClients } from "../../redux/features/client/clientSlice";
 
 const Dashboard = () => {
   useRedirectLoggedOutUser("/login");

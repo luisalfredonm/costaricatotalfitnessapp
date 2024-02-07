@@ -6,7 +6,7 @@ import Loader from "../../components/loader/Loader";
 import {
   createClient,
   selectIsLoading,
-} from "../../redux/features/product/clientSlice";
+} from "../../redux/features/client/clientSlice";
 
 const initialState = {
   name: "",

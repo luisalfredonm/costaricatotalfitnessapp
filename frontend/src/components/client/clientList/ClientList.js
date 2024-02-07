@@ -8,14 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   FILTER_PRODUCTS,
   selectFilteredPoducts,
-} from "../../../redux/features/product/filterSlice";
+} from "../../../redux/features/client/filterSlice";
 import ReactPaginate from "react-paginate";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import {
   deleteClient,
   getClients,
-} from "../../../redux/features/product/clientSlice";
+} from "../../../redux/features/client/clientSlice";
 import { Link } from "react-router-dom";
 
 const ClientList = ({ clients, isLoading }) => {
