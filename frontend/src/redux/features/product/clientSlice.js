@@ -4,7 +4,7 @@ import clientService from "./clientService";
 
 const initialState = {
   product: null,
-  products: [],
+  clients: [],
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -34,7 +34,7 @@ export const createClient = createAsyncThunk(
   }
 );
 
-// // Get all products
+// // Get all clients
 export const getClients = createAsyncThunk(
   "clients/getAll",
   async (_, thunkAPI) => {
@@ -114,9 +114,9 @@ const clientSlice = createSlice({
   initialState,
   reducers: {
     CALC_STORE_VALUE(state, action) {
-      const products = action.payload;
+      const clients = action.payload;
       const array = [];
-      products.map((item) => {
+      clients.map((item) => {
         const { price, quantity } = item;
         const productValue = price * quantity;
         return array.push(productValue);
@@ -127,9 +127,9 @@ const clientSlice = createSlice({
       state.totalStoreValue = totalValue;
     },
     CALC_OUTOFSTOCK(state, action) {
-      const products = action.payload;
+      const clients = action.payload;
       const array = [];
-      products.map((item) => {
+      clients.map((item) => {
         const { quantity } = item;
 
         return array.push(quantity);
@@ -143,9 +143,9 @@ const clientSlice = createSlice({
       state.outOfStock = count;
     },
     CALC_CATEGORY(state, action) {
-      const products = action.payload;
+      const clients = action.payload;
       const array = [];
-      products.map((item) => {
+      clients.map((item) => {
         const { category } = item;
 
         return array.push(category);
@@ -164,7 +164,7 @@ const clientSlice = createSlice({
         state.isSuccess = true;
         state.isError = false;
          console.log(action.payload);
-        state.products.push(action.payload);
+        state.clients.push(action.payload);
         toast.success("Client added successfully");
       })
       .addCase(createClient.rejected, (state, action) => {
@@ -181,7 +181,7 @@ const clientSlice = createSlice({
         state.isSuccess = true;
         state.isError = false;
          console.log(action.payload);
-        state.products = action.payload;
+        state.clients = action.payload;
       })
       .addCase(getClients.rejected, (state, action) => {
         state.isLoading = false;

@@ -11,7 +11,7 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const { products, isLoading, isError, message } = useSelector(
+  const { clients, isLoading, isError, message } = useSelector(
     (state) => state.product
   );
 
@@ -27,9 +27,9 @@ const Dashboard = () => {
 
   return (
     <div>
-      <ClientSummary products={products} />
-      <ClientList products={products} isLoading={isLoading} />
-      {/* <ClientList products={products} isLoading={isLoading} /> */}
+      <ClientSummary clients={clients} />
+      <ClientList clients={clients} isLoading={isLoading} />
+      {/* <ClientList clients={clients} isLoading={isLoading} /> */}
     </div>
   );
 };

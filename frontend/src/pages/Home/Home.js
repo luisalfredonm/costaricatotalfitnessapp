@@ -49,7 +49,7 @@ const Home = () => {
       <section className='container hero'>
         <div className="hero-text">
           <h2>Inventary {"&"} Stock Management Solution</h2>
-          <p> Inventory system to control and manage products in the warehouse in real time and integraed to make it easier to develop your business</p>
+          <p> Inventory system to control and manage clients in the warehouse in real time and integraed to make it easier to develop your business</p>
           <div className="hero-buttons">
             <button className="--btn --btn-secondary">
               <Link to="/dashboard"> Free Trial 1 month </Link>

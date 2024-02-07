@@ -25,17 +25,17 @@ export const formatNumbers = (x) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-const ClientSummary = ({ products }) => {
+const ClientSummary = ({ clients }) => {
   const dispatch = useDispatch();
   const totalStoreValue = useSelector(selectTotalStoreValue);
   const outOfStock = useSelector(selectOutOfStock);
   const category = useSelector(selectCategory);
 
   useEffect(() => {
-    dispatch(CALC_STORE_VALUE(products));
-     dispatch(CALC_OUTOFSTOCK(products));
-     dispatch(CALC_CATEGORY(products));
-  }, [dispatch, products]);
+    dispatch(CALC_STORE_VALUE(clients));
+     dispatch(CALC_OUTOFSTOCK(clients));
+     dispatch(CALC_CATEGORY(clients));
+  }, [dispatch, clients]);
 
   return (
     <div className="product-summary">
@@ -44,7 +44,7 @@ const ClientSummary = ({ products }) => {
         <InfoBox
           icon={productIcon}
           title={"Total Clients"}
-          count={products.length}
+          count={clients.length}
           bgColor="card1"
         />
         <InfoBox

@@ -18,7 +18,7 @@ import {
 } from "../../../redux/features/product/clientSlice";
 import { Link } from "react-router-dom";
 
-const ClientList = ({ products, isLoading }) => {
+const ClientList = ({ clients, isLoading }) => {
   const [search, setSearch] = useState("");
   const filteredClients = useSelector(selectFilteredPoducts);
 
@@ -75,8 +75,8 @@ const ClientList = ({ products, isLoading }) => {
   //   End Pagination
 
   useEffect(() => {
-    dispatch(FILTER_PRODUCTS({ products, search }));
-  }, [products, search, dispatch]);
+    dispatch(FILTER_PRODUCTS({ clients, search }));
+  }, [clients, search, dispatch]);
 
   return (
     <div className="product-list">
@@ -97,7 +97,7 @@ const ClientList = ({ products, isLoading }) => {
         {isLoading && <SpinnerImg />}
 
         <div className="table">
-          {!isLoading && products.length === 0 ? (
+          {!isLoading && clients.length === 0 ? (
             <p>-- No product found, please add a product...</p>
           ) : (
             <table>
