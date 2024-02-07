@@ -21,6 +21,7 @@ import EditProfile from "./pages/profile/EditProfile";
 import Contact from "./pages/contact/Contact";
 import AddClient from "./pages/addClient/AddClient";
 import ClientDetail from "./components/client/clientDetail/ClientDetail";
+import ProfileList from "./pages/profile/ProfileList";
 
 
 
@@ -106,6 +107,27 @@ function App() {
             <Sidebar>
               <Layout>
                 <Profile />
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/profile-list"
+          element={
+            <Sidebar>
+              <Layout>
+                <ProfileList />
+              </Layout>
+            </Sidebar>
+          }
+        />
+        
+          <Route
+          path="/profile"
+          element={
+            <Sidebar>
+              <Layout>
+                <ProfileList />
               </Layout>
             </Sidebar>
           }

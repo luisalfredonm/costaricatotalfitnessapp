@@ -54,6 +54,10 @@ const menu = [
         title: "Edit Profile",
         path: "/edit-profile",
       },
+      {
+        title: "Register",
+        path: "/register",
+      },
     ],
   },
   {
