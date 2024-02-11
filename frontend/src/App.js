@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home/Home";
 import Login from "./pages/auth/Login"
 import Forgot from "./pages/auth/Forgot"
@@ -22,6 +22,7 @@ import Contact from "./pages/contact/Contact";
 import AddClient from "./pages/addClient/AddClient";
 import ClientDetail from "./components/client/clientDetail/ClientDetail";
 import ProfileList from "./pages/profile/ProfileList";
+import AddUser from "./pages/addUser/AddUser";
 
 
 
@@ -42,16 +43,16 @@ function App() {
   }, [dispatch]);
 
   return (
-   <BrowserRouter>
-    <ToastContainer />
-   <Routes>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/forgot" element={<Forgot/>}/>
-    <Route path="/register" element={<Register/>}/>
-    <Route path="/resetpassword/:resetToken" element={<Reset/>}/>
+    <BrowserRouter>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot" element={<Forgot />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/resetpassword/:resetToken" element={<Reset />} />
 
-    <Route
+        <Route
           path="/dashboard"
           element={
             <Sidebar>
@@ -61,7 +62,17 @@ function App() {
             </Sidebar>
           }
         />
-         <Route
+          <Route
+          path="/add-user"
+          element={
+            <Sidebar>
+              <Layout>
+                <AddUser />
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
           path="/add-client"
           element={
             <Sidebar>
@@ -81,7 +92,7 @@ function App() {
             </Sidebar>
           }
         /> */}
-          <Route
+        <Route
           path="/product-detail/:id"
           element={
             <Sidebar>
@@ -91,7 +102,7 @@ function App() {
             </Sidebar>
           }
         />
-           <Route
+        <Route
           path="/edit-product/:id"
           element={
             <Sidebar>
@@ -101,7 +112,7 @@ function App() {
             </Sidebar>
           }
         />
-         <Route
+        <Route
           path="/profile"
           element={
             <Sidebar>
@@ -121,8 +132,8 @@ function App() {
             </Sidebar>
           }
         />
-        
-          <Route
+
+        <Route
           path="/profile"
           element={
             <Sidebar>
@@ -153,8 +164,8 @@ function App() {
           }
         />
 
-   </Routes>
-   </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
