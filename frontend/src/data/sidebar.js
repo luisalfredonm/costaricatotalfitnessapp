@@ -28,20 +28,20 @@ const menu = [
       },
     ],
   },
-  {
-    title: "Reports",
-    icon: <FaRegChartBar />,
-    childrens: [
-      {
-        title: "Sales History",
-        path: "/profile",
-      },
-      {
-        title: "Membership History",
-        path: "/edit-profile",
-      },
-    ],
-  },
+  // {
+  //   title: "Reports",
+  //   icon: <FaRegChartBar />,
+  //   childrens: [
+  //     {
+  //       title: "Sales History",
+  //       path: "/profile",
+  //     },
+  //     {
+  //       title: "Membership History",
+  //       path: "/edit-profile",
+  //     },
+  //   ],
+  // },
   {
     title: "Account",
     icon: <FaRegChartBar />,
@@ -58,33 +58,37 @@ const menu = [
         title: "Register",
         path: "/register",
       },
-    ],
-  },
-  {
-    title: "Admin",
-    icon: <BiImageAdd />,
-    childrens: [
       {
-        title: "Medios de Pago",
-        path: "/dashboard",
-      },
-      {
-        title: "Cuotas",
-
-        path: "/add-client",
-      },
-      {
-        title: "Roles y Permisos",
-
-        path: "/add-client",
+        title: "User List",
+        path: "/profile-list",
       },
     ],
   },
-  {
-    title: "Report Bug",
-    icon: <FaCommentAlt />,
-    path: "/contact-us",
-  },
+  // {
+  //   title: "Admin",
+  //   icon: <BiImageAdd />,
+  //   childrens: [
+  //     {
+  //       title: "Medios de Pago",
+  //       path: "/dashboard",
+  //     },
+  //     {
+  //       title: "Cuotas",
+
+  //       path: "/add-client",
+  //     },
+  //     {
+  //       title: "Roles y Permisos",
+
+  //       path: "/add-client",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Report Bug",
+  //   icon: <FaCommentAlt />,
+  //   path: "/contact-us",
+  // },
 ];
 
 export default menu;
